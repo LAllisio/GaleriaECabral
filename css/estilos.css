@@ -4,369 +4,370 @@
 /* ELIMINAR MARGENES PRE SETEADOS EN PAGINAS */
 *{margin: 0; padding:0; box-sizing: border-box;}
 
-/* FUENTE */
-html{
-  font-size: 62.5%;
-  font-family: 'Courier New', Courier, monospace;
-}
+@media only screen and (min-width: 768px){
 
-/* ENCABEZADO    */
-header {
-  background: rgb(0, 0, 0);
-  color: white;
-  /* padding: 2rem; */
-  grid-column: 1 / 4;
-  height: 6vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  /* FUENTE */
+  html{
+    font-size: 62.5%;
+    font-family: 'Courier New', Courier, monospace;
+  }
 
-body {
-  font-family: system-ui, sans-serif;
-}
+  /* ENCABEZADO    */
+  header {
+    background: rgb(0, 0, 0);
+    color: white;
+    /* padding: 2rem; */
+    grid-column: 1 / 4;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-
-/* -----------BARRA DE NAVEGACION--------- */
-nav{
-  background-color: rgb(135, 56, 56);
-  color: white;
-  grid-column: 1 / 4;
-  height: 4vh;
-  display:flex;
-  flex-flow: row;
-  font-size: 15px;
-  align-items: center;
-}
-ul {
-  display: block;  
-  list-style: none;
-  font-size:0; /* truco por el uso de inline-block*/
-  width: 100%;
-  text-align: center;
-  justify-content: space-around;
-  background-color: rgb(80, 25, 13);
-}
-li {
-  display: inline-block;
-  width: 20%;
-  position:relative;
-  font-size: 14px
-}
-ul ul {
-  position: absolute;
-  display: none;
-}
-ul ul li {
-  display: block;
-}
-ul li:hover ul {
-  display:block;
-}
-
-ul li a{
-   text-decoration: none;
-   font-size: 2rem;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   /* background-color: grey; */
-   color:white;
-   padding-right:5%;
-   padding-left:5%;
-}
-
-/* MARGENES LATERALES (ME PARECIA MAS SIMPLE CON PADING EN BODY) */
-.left-sidebar {
-  background: rgb(255, 255, 255);
-  grid-column: 1 / 2;
-  width: 8vw;
-  height: 100%;
-}
-
-.right-sidebar {
-  background: rgb(255, 255, 255);
-  grid-column: 3 / 4;
-  width: 8vw;
-  height: 100%;
-}
-
-/* BACKGROUND GRAL */
-.contenedorbase{
-  background-image: linear-gradient(to top, rgb(97, 26, 26), rgb(216, 60, 60));
-  height:auto;
-}
-
-.bodyflex{
-  padding: 0 8vw 0 8vw;
-}
-
-.mainflex{
-  display: flex;
-  background-image: linear-gradient(to top, rgb(97, 26, 26), rgb(216, 60, 60));
-  height:auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 8vw 0 8vw;
-}
-
-/* -----------------FOOTER------------------ */
-
-footer {
-  grid-column: 1 / 4;
-  height: 16vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(0, 0, 0); 
-  padding: 0 10% 0 10%;  
-  color: white;
-}
-
-.botoneraredes{
-  flex-flow: row;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.redes{
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  justify-content: space-evenly;
-  align-content: space-between;
-  margin: 0%;
-  background-color: blue;
-}
-
-.indice{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 33%;
-  height: 100%;
-  justify-content: center;
-  align-content: center;
-  margin: 0%;
-  background-color: black;
-}
-
-.cajafootds{
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  justify-content: space-evenly;
-  align-content: space-between;
-  margin: 0%;
-  text-align: right;
-
-}
-
-#redes{
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-  width: 33%;
-  justify-content: space-around;
-  align-content: space-between;
-  margin: 0%;
-}
-#botoneraredes{
-  flex-flow: row;
-}
+  body {
+    font-family: system-ui, sans-serif;
+  }
 
 
+  /* -----------BARRA DE NAVEGACION--------- */
+  nav{
+    background-color: rgb(135, 56, 56);
+    color: white;
+    grid-column: 1 / 4;
+    height: 4vh;
+    display:flex;
+    flex-flow: row;
+    font-size: 15px;
+    align-items: center;
+  }
+  ul {
+    display: block;  
+    list-style: none;
+    font-size:0; /* truco por el uso de inline-block*/
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    background-color: rgb(80, 25, 13);
+  }
+  li {
+    display: inline-block;
+    width: 20%;
+    position:relative;
+    font-size: 14px
+  }
+  ul ul {
+    position: absolute;
+    display: none;
+  }
+  ul ul li {
+    display: block;
+  }
+  ul li:hover ul {
+    display:block;
+  }
 
-/* -------------------------ESTILOS PARTICULARES-------------------------- */
+  ul li a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color: grey; */
+    color:white;
+    padding-right:5%;
+    padding-left:5%;
+  }
 
+  /* MARGENES LATERALES (ME PARECIA MAS SIMPLE CON PADING EN BODY) */
+  .left-sidebar {
+    background: rgb(255, 255, 255);
+    grid-column: 1 / 2;
+    width: 8vw;
+    height: 100%;
+  }
 
-/* ----------INDEX---------- */
-.bodyindex{
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template: auto 1fr auto / auto 1fr auto
-}
+  .right-sidebar {
+    background: rgb(255, 255, 255);
+    grid-column: 3 / 4;
+    width: 8vw;
+    height: 100%;
+  }
 
-.mainindexcontacto {
-  grid-column: 2 / 3;
-  width: 84vw;
-  height:74vh ;
-  display: flex;
-  box-sizing: border-box;
-  padding: 0 5vw 0 5vw;
-  justify-content: space-between;
-  align-items: center;
-  margin:auto
-} 
+  /* BACKGROUND GRAL */
+  .contenedorbase{
+    background-image: linear-gradient(to top, rgb(97, 26, 26), rgb(216, 60, 60));
+    height:auto;
+  }
 
-.presentacion{
-  /* width: 35vh; */
-  color: white;
-  font-size: large;
-  margin-left: 3%;
-}
+  .bodyflex{
+    padding: 0 8vw 0 8vw;
+  }
 
-/* ----------CONTACTO---------- */
-.Formulario{
-  height: 74vh;
-  width: 100%;
-  display: flex;
-  /* margin: 10vw 0 10vw 0; */
-  box-sizing: border-box;
-  padding: 5% 10% 5% 10%;
-  justify-content: space-around;
-  align-items: center;
-  border: 2px;
-  border-color: black; 
-  font-size: 14px;
-}
+  .mainflex{
+    display: flex;
+    background-image: linear-gradient(to top, rgb(97, 26, 26), rgb(216, 60, 60));
+    height:auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8vw 0 8vw;
+  }
 
-/* ----------ARTISTA---------- */
-.bodyartista{
-  display: grid;
-  height: 148vh;
-  width: 100vw;
-  grid-template: auto 1fr auto / auto 1fr auto
-}
+  /* -----------------FOOTER------------------ */
 
-.mainartista {
-grid-column: 2 / 3;
-width: 84vw;
-height: 200vh;
-display: flex;
-flex-direction: column;
-box-sizing: border-box;
-padding: 0 5vw 0 5vw;
-justify-content: space-between;
-align-items: center;
-margin:auto
-} 
+  footer {
+    grid-column: 1 / 4;
+    height: 16vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 0, 0); 
+    padding: 0 10% 0 10%;  
+    color: white;
+  }
 
-#proceso{
-  border-color: black;
-  background-color: blueviolet;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  padding: 2%;
-  height: 63%;
-}
+  .botoneraredes{
+    flex-flow: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-#bio{
-  border-color: black;
-  background-color: rgb(43, 226, 43);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  padding: 2%;
-  height: 60%;
-}
-/* __________________________________________________________________ */
-
- 
-#exposiciones {
+  .redes{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    width: 33%;
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin: 0%;
+    background-color: blue;
+  }
+
+  .indice{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 33%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    margin: 0%;
+    background-color: black;
+  }
+
+  .cajafootds{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin: 0%;
+    text-align: right;
+
+  }
+
+  #redes{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 33%;
+    justify-content: space-around;
+    align-content: space-between;
+    margin: 0%;
+  }
+  #botoneraredes{
+    flex-flow: row;
+  }
+
+
+
+  /* -------------------------ESTILOS PARTICULARES-------------------------- */
+
+
+  /* ----------INDEX--------------------------------- */
+  .bodyindex{
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template: auto 1fr auto / auto 1fr auto
+  }
+
+  .mainindexcontacto {
+    grid-column: 2 / 3;
+    width: 84vw;
+    height:74vh ;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 5vw 0 5vw;
     justify-content: space-between;
+    align-items: center;
+    margin:auto
+  } 
+
+  .presentacion{
+    /* width: 35vh; */
+    color: white;
+    font-size: large;
+    margin-left: 3%;
+  }
+
+  /* ----------CONTACTO---------------------------- */
+  .Formulario{
+    height: 74vh;
+    width: 100%;
+    display: flex;
+    /* margin: 10vw 0 10vw 0; */
+    box-sizing: border-box;
+    padding: 5% 10% 5% 10%;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px;
+    border-color: black; 
+    font-size: 14px;
+  }
+
+  /* ----------ARTISTA-------------------------------- */
+  .bodyartista{
+    display: grid;
+    height: auto;
+    width: 100vw;
+    grid-template: auto 1fr auto / auto 1fr auto
+  }
+
+  .mainartista {
+  grid-column: 2 / 3;
+  width: 84vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 5vw 0 5vw;
+  align-items: center;
+  margin:auto
+  } 
+
+  #proceso{
+    border-color: black;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    height: 90vh;
+  }
+
+  #bio{
+    border-color: black;
+    background-color: rgb(43, 226, 43);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    height: 82vh;
+  }
+
+  .imagenTema{
+    width: 100%;
+    height: auto;
+  }
+
+  /* ----------PARTICIPACIONES----------------------- */
+  #exposiciones {
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 5%;
+  }
+
+  .sectiondiv{
+      height: 90vh;
+      width: auto;
+      background-color: white;
+      border: solid 1px black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+  } 
+
+  .expo{
+    background-color: goldenrod;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    justify-content: space-between;
+  }
+
+  #resenas{
+    display: flex;
+    flex-direction: inherit;
+    height: 100vh;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 5%;
-}
+    background-color: pink;
+  }
 
-.sectiondiv{
+  .sectiondivinlinebloq{
     height: 90vh;
     width: auto;
     background-color: white;
     border: solid 1px black;
+    display: inline-block;
+    padding: 2%;
+  } 
+
+  .resena{
+    background-color: goldenrod;
+    height: 48%;
+    width: 48%;
+    display: inline-block;
+    padding: 1%;
+    justify-content: space-between;
+  }
+
+  #Tour{
+    grid-area: Tour;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    width: auto;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-} 
+  }
+  .tour{
+    display: flex;
+    grid-area: tour;
+    background-color: white;
+    border: solid 1px black;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    width: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 
-.expo{
-  background-color: goldenrod;
-  height: 100%;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  padding: 2%;
-  justify-content: space-between;
+
+  h2 { color: white;
+      background-color: black;
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 3vh;
+      align-items: center;
+  }
 }
-
-#resenas{
-  display: flex;
-  flex-direction: inherit;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5%;
-  background-color: pink;
-}
-
-.sectiondivinlinebloq{
-  height: 90vh;
-  width: auto;
-  background-color: white;
-  border: solid 1px black;
-  display: inline-block;
-  padding: 2%;
-} 
-
-.resena{
-  background-color: goldenrod;
-  height: 48%;
-  width: 48%;
-  display: inline-block;
-  padding: 1%;
-  justify-content: space-between;
-}
-
-#Tour{
-  grid-area: Tour;
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  align-items: center;
-}
-.tour{
-  display: flex;
-  grid-area: tour;
-  background-color: white;
-  border: solid 1px black;
-  justify-content: center;
-  text-align: center;
-  font-size: 3rem;
-  width: auto;
-  margin-left: 10vw;
-  margin-right: 10vw;
-}
-
-
-h2 { color: white;
-    background-color: black;
-    display: block;
-    font-size: 2rem;
-    margin-bottom: 3vh;
-    align-items: center;
-}
-
-
-
-
-
-
+/* -------------------------MEDIAQUERIS-------------------------- */
 
 /* ________________________TARJETAS DE CUADROS*/
 /* article{
@@ -420,11 +421,6 @@ article div p{padding: 3%;
 
 }
 
-.imagenTema{
-    width: 100%;
-    height: auto;
-}
-
 #Postales{
     display: flex;
 }
@@ -432,5 +428,6 @@ article div p{padding: 3%;
 #Rurales{
     background-color: rgb(0, 0, 0);
 }
+
 
 
